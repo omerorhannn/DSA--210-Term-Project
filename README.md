@@ -108,28 +108,6 @@ The dataset consists of personal sleep and cognitive performance data collected 
 
 3- High WASO negatively impacted attention scores.
 
-# Machine Learning Objective
-
-Predict cognitive performance scores based on **sleep metrics** and **activity levels.**
-
-**Models Used:**
-
-1- Linear Regression: Baseline model for continuous relationships
-
-2- Random Forest Regression: Captures nonlinear effects of sleep features
-
-3- Support Vector Regression (SVR): Robust against small dataset noise
-
-**Feature Engineering:**
-
-1- Sleep stage percentages (deep, REM, light)
-
-2- Normalized total sleep time
-
-3- Activity-adjusted sleep metrics
-
-**Results:** Random Forest showed superior prediction accuracy, capturing nonlinear sleep–cognition relationships.
-
 # Conclusion and Key Insights
 
 1- Sleep quality **strongly** influences daily cognitive performance.
