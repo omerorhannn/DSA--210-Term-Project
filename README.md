@@ -1,5 +1,5 @@
 # The Impact of Sleep Quality on Daily Cognitive Performance
-Motivation
+# Motivation
 
 This project aims to analyze how sleep quality and duration affect daily cognitive performance, measured through focus-related metrics such as screen time, typing accuracy, and reaction time.
 
@@ -7,7 +7,7 @@ Using Apple Watch and phone usage data, I will examine how variations in total s
 
 The goal is to quantify how sleep consistency translates into measurable cognitive output, bridging the gap between physiological recovery and everyday performance.
 
-🧩 Objectives
+# Objectives
 
 Track Sleep Metrics:
 Collect daily sleep data (total sleep time, REM percentage, HRV, average heart rate) using Apple Watch and Health App data.
@@ -21,7 +21,7 @@ Apply correlation and regression analyses to explore how variations in sleep met
 Develop Predictive Insights:
 Build a simple machine learning model that predicts focus/performance level from prior-night sleep data, supporting better rest-planning strategies.
 
-📊 Dataset
+# Dataset
 Variable	Type	Description
 Total Sleep Duration (hours)	Numerical	Total time asleep per night
 REM Sleep (% of total)	Numerical	Percentage of deep REM sleep
@@ -43,11 +43,11 @@ Scikit-Learn: Regression & classification modeling (e.g., Logistic Regression, R
 
 Jupyter Notebook: Code development and visualization.
 
-❓ Research Question
+# Research Question
 
 How does sleep quality — measured by total duration, HRV, and REM percentage — influence daily cognitive performance and focus levels?
 
-🧪 Hypothesis Testing
+# Hypothesis Testing
 
 H₀ (Null Hypothesis): Sleep quality (duration, HRV, REM %) has no significant effect on cognitive performance.
 
@@ -61,7 +61,7 @@ t-tests between “high-focus” vs. “low-focus” days
 
 Linear regression predicting performance from sleep metrics
 
-🧹 Data Collection and Processing
+# Data Collection and Processing
 
 Data Acquisition via Apple Health Export
 
@@ -95,7 +95,7 @@ Sleep efficiency = (actual sleep / time in bed) × 100
 
 Focus level = 1 if performance ≥ median else 0
 
-📈 Data Visualization and Analysis
+# Data Visualization and Analysis
 
 Line plots: Sleep duration vs. performance score over 30 days.
 
@@ -105,7 +105,7 @@ Boxplots: Performance grouped by “short” (< 6 h) vs. “long” (> 7 h) slee
 
 Scatterplot: HRV vs. reaction-time performance.
 
-🔢 Machine Learning Objective
+# Machine Learning Objective
 
 A lightweight predictive model to estimate the probability of a high-focus day based on previous-night sleep data.
 
@@ -121,7 +121,7 @@ Random Forest Classifier (non-linear)
 
 Metrics: Accuracy, Precision, Recall, F1-score
 
-📐 Expected Results
+# Expected Results
 
 Positive correlation between total sleep and focus score.
 
@@ -129,13 +129,13 @@ Higher HRV → better reaction-time performance.
 
 Random Forest achieves highest predictive accuracy (~70–80 %).
 
-🧭 Conclusion
+# Conclusion
 
 This project demonstrates how physiological recovery (sleep metrics) affects cognitive output and focus.
 It merges numerical (sleep data) and behavioral (focus test / screen-time data) sources to reveal actionable insights about recovery and productivity.
 The findings can inform personalized sleep optimization strategies for students, athletes, or professionals.
 
-🔮 Future Work
+# Future Work
 
 Extend the dataset to multiple months for stronger statistical power.
 
