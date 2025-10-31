@@ -147,28 +147,3 @@ Intervention Studies: Test the effect of sleep hygiene improvements on cognitive
 
 Multi-Day Cognitive Patterns: Analyze cumulative effects of poor sleep over consecutive days.
 
-# Project Structure
-
-project_root/
-│
-├── data/
-│   ├── raw/                    # Raw wearable and test data
-│   ├── processed_data.csv       # Cleaned merged dataset
-│
-├── notebooks/
-│   ├── data_processing.ipynb
-│   ├── visualization.ipynb
-│   └── ml_models.ipynb
-│
-├── scripts/
-│   ├── parse_wearable_data.py
-│   ├── feature_engineering.py
-│   └── regression_models.py
-│
-├── figures/
-│   ├── scatterplots/
-│   ├── boxplots/
-│   └── heatmaps/
-│
-├── README.md
-└── requirements.txt
