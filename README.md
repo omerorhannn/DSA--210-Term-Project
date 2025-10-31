@@ -80,7 +80,7 @@ The dataset consists of personal sleep and cognitive performance data collected 
 |Reaction time                     |Human Benchmark               |Response speed             |              
 |Number memory                     |Human Benchmark – Memory Test |Short-term recall          |              
 |Stroop test                       |CognitiveFun.net              |Focus and attention        |
-|n Back test                       |Cognitive Atlas               |Working memory             |                       
+|n-Back test                       |Cognitive Atlas               |Working memory             |                       
 
 **Data Export:** Device data exported in CSV or JSON format; cognitive test results collected automatically from test platforms.
 
