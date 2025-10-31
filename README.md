@@ -74,7 +74,7 @@ The dataset consists of personal sleep and cognitive performance data collected 
 
 **Cognitive Testing:** Daily standardized tests were performed in the morning to assess reaction time, working memory, and attention.
 
-**Test Type	Platform	Measures**
+**Test Type	Platform	Measures:**
 | Test Type                        | Platform                     | Measures                  |
 |----------------------------------|------------------------------|---------------------------|
 |Reaction time                     |Human Benchmark               |Response speed             |              
