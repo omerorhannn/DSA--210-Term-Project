@@ -21,17 +21,18 @@ Using wearable devices (e.g., Apple Watch, Fitbit) and standardized cognitive te
 # Dataset
 
 The dataset consists of personal sleep and cognitive performance data collected over a 30-day period:
+| Feature                                    | Description                                                                 |
+|--------------------------------------------|-----------------------------------------------------------------------------|
+| Total Sleep Time (hours)                   | Duration of nightly sleep                                                   |
+| Sleep Efficiency (%)                       | Ratio of total sleep time to time in bed                                    | 
+| Time in Deep Sleep (hours)	               | Duration of restorative sleep                                               |
+| Time in REM Sleep (hours)                  | Duration of REM sleep, critical for memory consolidation                    |
+| Wake After Sleep Onset (WASO, minutes)	   | Time spent awake during the night                                           |
+| Bedtime & Wake Time	                       | Sleep schedule for each night                                               |
+| Cognitive Test Scores	                     | Results of daily cognitive tasks (reaction time, memory, attention)         |
+| Mood & Fatigue Levels	                     | Subjective ratings collected daily                                          |
+| Daytime Activity                           | Levels	Steps, heart rate, or other activity metrics collected via wearable  |
 
-**Feature**                                          **Description** 
-  Total Sleep Time (hours)                             Duration of nightly sleep
-  Sleep Efficiency (%)                                 Ratio of total sleep time to time in bed
-  Time in Deep Sleep (hours)	                         Duration of restorative sleep
-  Time in REM Sleep (hours)                          	 Duration of REM sleep, critical for memory consolidation
-  Wake After Sleep Onset (WASO, minutes)	             Time spent awake during the night
-  Bedtime & Wake Time	                                 Sleep schedule for each night
-  Cognitive Test Scores	                               Results of daily cognitive tasks (reaction time, memory, attention)
-  Mood & Fatigue Levels	                               Subjective ratings collected daily
-  Daytime Activity                                     Levels	Steps, heart rate, or other activity metrics collected via wearable
 
 **Data Collection Method:**
 
