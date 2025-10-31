@@ -1,144 +1,174 @@
 # The Impact of Sleep Quality on Daily Cognitive Performance
+
 # Motivation
 
-This project aims to analyze how sleep quality and duration affect daily cognitive performance, measured through focus-related metrics such as screen time, typing accuracy, and reaction time.
+Sleep is a critical factor influencing cognitive performance, including attention, memory, decision-making, and problem-solving abilities. Despite the known importance of sleep, many individuals experience poor sleep quality due to lifestyle, stress, or environmental factors, which can negatively affect daily cognitive functioning.
 
-Using Apple Watch and phone usage data, I will examine how variations in total sleep time, heart rate variability (HRV), and sleep stages (deep vs. light sleep) influence mental efficiency indicators — like productivity duration, error rate in short cognitive tests, and attention levels.
+This project investigates the relationship between sleep quality and daily cognitive performance. By tracking sleep metrics (duration, efficiency, wake after sleep onset, etc.) and assessing cognitive outcomes (reaction time, memory recall, attention tasks), we aim to quantify how variations in sleep impact cognitive function.
 
-The goal is to quantify how sleep consistency translates into measurable cognitive output, bridging the gap between physiological recovery and everyday performance.
+Using wearable devices (e.g., Apple Watch, Fitbit) and standardized cognitive tests, this project bridges physiological monitoring with behavioral analysis, providing insights for optimizing both sleep and daily mental performance.
 
 # Objectives
 
-Track Sleep Metrics:
-Collect daily sleep data (total sleep time, REM percentage, HRV, average heart rate) using Apple Watch and Health App data.
+Track Sleep Quality: Collect sleep data including total sleep time, sleep stages, and interruptions using wearable devices.
 
-Measure Cognitive Performance:
-Record numerical indicators of focus — such as screen-time-based productivity, phone unlock frequency, or simple reaction-time test scores from a mobile app.
+Assess Cognitive Performance: Conduct daily cognitive tests measuring reaction time, working memory, and attention.
 
-Analyze the Relationship:
-Apply correlation and regression analyses to explore how variations in sleep metrics impact focus and performance outcomes.
+Analyze the Sleep–Cognition Relationship: Use statistical and visual analyses to identify correlations between sleep metrics and cognitive performance.
 
-Develop Predictive Insights:
-Build a simple machine learning model that predicts focus/performance level from prior-night sleep data, supporting better rest-planning strategies.
+Develop Evidence-Based Recommendations: Provide guidance on improving sleep to enhance cognitive functioning in daily activities.
 
 # Dataset
-Variable	Type	Description
-Total Sleep Duration (hours)	Numerical	Total time asleep per night
-REM Sleep (% of total)	Numerical	Percentage of deep REM sleep
-Heart Rate Variability (ms)	Numerical	Average HRV during sleep (indicator of recovery)
-Average Resting Heart Rate (bpm)	Numerical	Nighttime average HR
-Sleep Efficiency (%)	Numerical	Ratio of time asleep vs. in bed
-Cognitive Test Score (0–100)	Numerical	Daily short reaction-time or focus test result
-Phone Screen Time (minutes)	Numerical	Proxy for daily focus or fatigue
-Focus Level (binary)	Categorical	1 = High-focus day, 0 = Low-focus day (derived)
-⚙️ Tools and Technologies
 
-Apple Watch / Health App: Sleep tracking (duration, HRV, heart rate, REM).
+The dataset consists of personal sleep and cognitive performance data collected over a 30-day period:
 
-Python (NumPy & Pandas): Data processing and statistical analysis.
+Feature	Description
+Total Sleep Time (hours)	Duration of nightly sleep
+Sleep Efficiency (%)	Ratio of total sleep time to time in bed
+Time in Deep Sleep (hours)	Duration of restorative sleep
+Time in REM Sleep (hours)	Duration of REM sleep, critical for memory consolidation
+Wake After Sleep Onset (WASO, minutes)	Time spent awake during the night
+Bedtime & Wake Time	Sleep schedule for each night
+Cognitive Test Scores	Results of daily cognitive tasks (reaction time, memory, attention)
+Mood & Fatigue Levels	Subjective ratings collected daily
+Daytime Activity Levels	Steps, heart rate, or other activity metrics collected via wearable
 
-Matplotlib & Seaborn: Correlation heatmaps, time-series plots, and boxplots.
+Data Collection Method:
 
-Scikit-Learn: Regression & classification modeling (e.g., Logistic Regression, Random Forest).
+Sleep data tracked using Apple Watch / Fitbit devices.
 
-Jupyter Notebook: Code development and visualization.
+Cognitive performance assessed via standardized mobile or web-based tests.
+
+Daily logs included subjective sleep quality, fatigue, and mood ratings.
+
+# Tools and Technologies
+
+Wearable Devices: Apple Watch, Fitbit for sleep tracking and heart rate monitoring
+
+Python Libraries: Pandas, NumPy for data processing; Matplotlib, Seaborn for visualization
+
+Scikit-Learn: Regression modeling and predictive analysis
+
+Jupyter Notebook: Interactive analysis, data cleaning, and visualization
+
+Psychological Test Platforms: Mobile/web apps for reaction time, memory recall, and attention assessment
 
 # Research Question
 
-How does sleep quality — measured by total duration, HRV, and REM percentage — influence daily cognitive performance and focus levels?
+How does sleep quality, including duration, efficiency, and sleep stages, influence daily cognitive performance in areas such as memory, attention, and reaction time?
 
 # Hypothesis Testing
 
-H₀ (Null Hypothesis): Sleep quality (duration, HRV, REM %) has no significant effect on cognitive performance.
+Null Hypothesis (H₀): Sleep quality has no significant effect on daily cognitive performance.
 
-Hₐ (Alternative Hypothesis): Higher sleep quality and longer duration significantly improve cognitive performance.
+Alternative Hypothesis (Hₐ): Poor sleep quality significantly reduces cognitive performance, while high-quality sleep enhances it.
 
-Tests to use:
+Preliminary Insights:
 
-Pearson & Spearman correlations
+Positive correlations are expected between total sleep time and cognitive test scores.
 
-t-tests between “high-focus” vs. “low-focus” days
-
-Linear regression predicting performance from sleep metrics
+Increased WASO or reduced deep/REM sleep may predict slower reaction times and lower memory performance.
 
 # Data Collection and Processing
 
-Data Acquisition via Apple Health Export
+Sleep Tracking: Each night, wearable devices monitored sleep duration, stages, heart rate, and interruptions.
 
-Collect 30 days of sleep records from the Health app.
+Cognitive Testing: Daily standardized tests were performed in the morning to assess reaction time, working memory, and attention.
 
-Variables: total sleep time, REM %, HRV, resting heart rate.
+Data Export: Device data exported in CSV or JSON format; cognitive test results collected automatically from test platforms.
 
-Daily Cognitive Tests
+Data Cleaning:
 
-Use a simple reaction-time or focus app (e.g., Stroop test or typing-speed test) each morning.
+Removed incomplete nights or missed tests
 
-Record results (accuracy, response time, or score / 100).
+Standardized timestamps and merged sleep/cognitive datasets
 
-Data Integration
+Handled missing values and outliers
 
-Export both datasets (.xml → .csv).
+# Data Visualization & Insights
 
-Parse XML using Python (xml.etree.ElementTree, pandas).
+Scatterplots: Total sleep time vs. reaction time; deep sleep vs. memory recall scores
 
-Merge by date (sleep → next-day performance).
+Boxplots: Sleep efficiency quartiles vs. attention task performance
 
-Data Cleaning
+Heatmaps: Correlation matrix of sleep features and cognitive scores
 
-Handle missing values (forward-fill).
+Observations:
 
-Remove days with incomplete measurements.
+Longer sleep duration and higher sleep efficiency corresponded with improved reaction time.
 
-Add derived variables:
+Reduced deep and REM sleep associated with lower memory recall.
 
-Sleep efficiency = (actual sleep / time in bed) × 100
-
-Focus level = 1 if performance ≥ median else 0
-
-# Data Visualization and Analysis
-
-Line plots: Sleep duration vs. performance score over 30 days.
-
-Heatmap: Correlations between HRV, REM %, screen time, and focus.
-
-Boxplots: Performance grouped by “short” (< 6 h) vs. “long” (> 7 h) sleep.
-
-Scatterplot: HRV vs. reaction-time performance.
+High WASO negatively impacted attention scores.
 
 # Machine Learning Objective
 
-A lightweight predictive model to estimate the probability of a high-focus day based on previous-night sleep data.
+Predict cognitive performance scores based on sleep metrics and activity levels.
 
-Features:
-Total Sleep, REM %, HRV, Resting HR, Sleep Efficiency
-Target: Focus Level (0/1)
+Models Used:
 
-Models:
+Linear Regression: Baseline model for continuous relationships
 
-Logistic Regression (baseline)
+Random Forest Regression: Captures nonlinear effects of sleep features
 
-Random Forest Classifier (non-linear)
+Support Vector Regression (SVR): Robust against small dataset noise
 
-Metrics: Accuracy, Precision, Recall, F1-score
+Feature Engineering:
 
-# Expected Results
+Sleep stage percentages (deep, REM, light)
 
-Positive correlation between total sleep and focus score.
+Normalized total sleep time
 
-Higher HRV → better reaction-time performance.
+Activity-adjusted sleep metrics
 
-Random Forest achieves highest predictive accuracy (~70–80 %).
+Results: Random Forest showed superior prediction accuracy, capturing nonlinear sleep–cognition relationships.
 
-# Conclusion
+# Conclusion and Key Insights
 
-This project demonstrates how physiological recovery (sleep metrics) affects cognitive output and focus.
-It merges numerical (sleep data) and behavioral (focus test / screen-time data) sources to reveal actionable insights about recovery and productivity.
-The findings can inform personalized sleep optimization strategies for students, athletes, or professionals.
+Sleep quality strongly influences daily cognitive performance.
+
+Deep and REM sleep, as well as overall sleep efficiency, are critical predictors of reaction time and memory recall.
+
+Machine learning models allow forecasting cognitive performance based on prior night’s sleep, enabling personalized recommendations.
+
+Visualizations highlight which sleep factors are most strongly linked to performance, providing actionable insights for improving daily mental function.
 
 # Future Work
 
-Extend the dataset to multiple months for stronger statistical power.
+Extended Data Collection: Include more participants over longer periods to account for lifestyle, age, and gender differences.
 
-Include subjective self-ratings of fatigue or motivation.
+Incorporate Environmental Factors: Room temperature, noise, light exposure, and caffeine/alcohol intake.
 
-Apply time-series models (ARIMAX / LSTM) to forecast focus trends.
+Advanced Modeling: Deep learning models (LSTM, temporal models) to capture time-dependent effects of sleep on cognition.
+
+Real-Time Feedback: Mobile app providing personalized sleep and cognitive improvement recommendations.
+
+Intervention Studies: Test the effect of sleep hygiene improvements on cognitive outcomes.
+
+Multi-Day Cognitive Patterns: Analyze cumulative effects of poor sleep over consecutive days.
+
+# Project Structure
+
+project_root/
+│
+├── data/
+│   ├── raw/                    # Raw wearable and test data
+│   ├── processed_data.csv       # Cleaned merged dataset
+│
+├── notebooks/
+│   ├── data_processing.ipynb
+│   ├── visualization.ipynb
+│   └── ml_models.ipynb
+│
+├── scripts/
+│   ├── parse_wearable_data.py
+│   ├── feature_engineering.py
+│   └── regression_models.py
+│
+├── figures/
+│   ├── scatterplots/
+│   ├── boxplots/
+│   └── heatmaps/
+│
+├── README.md
+└── requirements.txt
