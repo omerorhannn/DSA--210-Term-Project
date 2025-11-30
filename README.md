@@ -68,6 +68,24 @@ The dataset consists of personal sleep and cognitive performance data collected 
 
 2- Increased WASO or reduced deep/REM sleep may predict slower reaction times and lower memory performance.
 
+# Methodology & Technical Approach
+
+## 1. Data Collection and Augmentation
+The project initially utilizes real-world data collected over 30 days via **Apple Watch** (sleep metrics) and **Human Benchmark** (cognitive tests). To address the limitations of small sample sizes, **statistical data augmentation** is employed to generate a synthetic **365-day dataset**. This simulated dataset preserves the statistical properties (mean, variance) of the original data while introducing realistic variability (e.g., weekend sleep patterns), enabling robust Machine Learning applications.
+
+## 2. Advanced Data Preprocessing
+To ensure data reliability, the following preprocessing pipeline is implemented:
+- **Feature Engineering:** Generation of rolling window features (e.g., 7-day moving average of sleep) to analyze the cumulative effect of sleep deprivation.
+- **Temporal Extraction:** Segmentation of data into Weekday/Weekend categories to account for behavioral shifts.
+- **Outlier Handling:** Detection and capping of unrealistic data points (e.g., sleep < 3 hours) using statistical thresholds.
+- **Normalization:** Min-Max scaling of cognitive scores for consistent input into ML models.
+
+## 3. Analysis and Modeling
+The project moves beyond basic visualization to include:
+- **Statistical Hypothesis Testing:** Pearson correlation and T-tests to statistically validate the impact of Deep Sleep on Memory.
+- **Time Series Visualization:** Analysis of trends over a full year to observe seasonal variations in sleep quality.
+- **Predictive Modeling (Phase 3):** Implementation of **Linear Regression** and **Random Forest** models to predict daily cognitive performance based on the previous night's sleep architecture (Deep, REM, WASO).
+- 
 # Data Collection and Processing
 
 **Sleep Tracking:** Each night, wearable devices monitored sleep duration, stages, heart rate, and interruptions.
