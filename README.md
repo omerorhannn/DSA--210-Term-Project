@@ -94,7 +94,7 @@ The dataset consists of personal sleep and cognitive performance data collected 
 
 # Data Visualization & Insights
 
-**Scatterplots:** Total sleep time vs. reaction time; deep sleep vs. memory recall scores
+**Lineplots:** Total sleep time vs. reaction time; deep sleep vs. memory recall scores
 
 **Boxplots:** Sleep efficiency quartiles vs. attention task performance
 
