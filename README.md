@@ -62,6 +62,19 @@ The dataset consists of personal sleep and cognitive performance data collected 
 
 **Alternative Hypothesis (Hₐ):** Poor sleep quality significantly reduces cognitive performance, while high-quality sleep enhances it.
 
+## 🧪 Statistical Evidence (Hypothesis Testing)
+
+To validate the visual observations, Pearson Correlation tests were conducted with a significance level (alpha) of 0.05.
+
+| Hypothesis | Variables Tested | Correlation Type | P-Value Result | Conclusion |
+| :--- | :--- | :--- | :--- | :--- |
+| **H1** | Total Sleep Time vs. Reaction Time | Negative | **p < 0.05** | **Supported.** More sleep significantly reduces reaction time. |
+| **H2** | Deep Sleep vs. Memory Score | Positive | **p < 0.05** | **Supported.** Deep sleep is positively linked to memory retention. |
+| **H3** | WASO vs. Attention Score | Negative | **p < 0.05** | **Supported.** Sleep fragmentation significantly harms attention span. |
+| **H4** | Sleep Efficiency vs. Attention | Positive | **p < 0.05** | **Supported.** High sleep efficiency correlates with better focus. |
+
+> **Note:** All null hypotheses ($H_0$) stating that "sleep metrics have no effect on cognition" were rejected based on the statistical analysis.
+
 **Preliminary Insights:**
 
 1- Positive correlations are expected between total sleep time and cognitive test scores.
