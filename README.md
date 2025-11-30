@@ -20,7 +20,7 @@ Using wearable devices (e.g., Apple Watch, Fitbit) and standardized cognitive te
 
 # Dataset
 
-The dataset consists of personal sleep and cognitive performance data collected over a 30-day period:
+The dataset consists of personal sleep and cognitive performance data collected over a 365-day period:
 | Feature                                    | Description                                                                 |
 |--------------------------------------------|-----------------------------------------------------------------------------|
 | Total Sleep Time (hours)                   | Duration of nightly sleep                                                   |
