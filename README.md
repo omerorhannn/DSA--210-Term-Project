@@ -62,7 +62,7 @@ The dataset consists of personal sleep and cognitive performance data collected 
 
 **Alternative Hypothesis (Hₐ):** Poor sleep quality significantly reduces cognitive performance, while high-quality sleep enhances it.
 
-## 🧪 Statistical Evidence (Hypothesis Testing)
+## Statistical Evidence (Hypothesis Testing)
 
 To validate the visual observations, Pearson Correlation tests were conducted with a significance level (alpha) of 0.05.
 
