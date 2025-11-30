@@ -85,7 +85,7 @@ The project moves beyond basic visualization to include:
 - **Statistical Hypothesis Testing:** Pearson correlation and T-tests to statistically validate the impact of Deep Sleep on Memory.
 - **Time Series Visualization:** Analysis of trends over a full year to observe seasonal variations in sleep quality.
 - **Predictive Modeling (Phase 3):** Implementation of **Linear Regression** and **Random Forest** models to predict daily cognitive performance based on the previous night's sleep architecture (Deep, REM, WASO).
-- 
+
 # Data Collection and Processing
 
 **Sleep Tracking:** Each night, wearable devices monitored sleep duration, stages, heart rate, and interruptions.
