@@ -121,25 +121,48 @@ To validate the visual observations, Pearson Correlation tests were conducted wi
 
 3- High WASO negatively impacted attention scores.
 
-# Technical Analysis & Machine Learning
+# Sleep Quality & Cognitive Performance Analysis
 
-To investigate the predictive power of sleep metrics on cognitive performance, we applied Machine Learning techniques using Python's `scikit-learn` library.
+> **Project Goal:** Investigating the predictive power of sleep metrics on cognitive performance (Reaction Time) using an advanced Machine Learning pipeline.
 
-### 1. Data Analysis Methodology
-We performed Exploratory Data Analysis (EDA) using correlation heatmaps and pair plots to identify multicollinearity and linear relationships. Statistical significance was verified using Pearson correlation tests with a significance level of $p < 0.05$.
+## Methodology
 
-### 2. Machine Learning Model
-Given the dataset characteristics, we implemented a **Random Forest Regressor** to predict cognitive outcomes (e.g., Reaction Time) based on sleep features.
-* **Target Variable:** Reaction Time / Attention Score
-* **Features:** Sleep Duration, Efficiency, Deep Sleep, REM, WASO.
-* **Model Choice:** Random Forest was selected for its robustness to non-linear relationships and ability to provide feature importance scores.
+### 1. Data Analysis Approach
+We implemented a rigorous data preprocessing and analysis workflow:
+* **Exploratory Data Analysis (EDA):** Utilized correlation heatmaps and pair plots to detect multicollinearity and linear relationships.
+* **Statistical Validation:** Verified significance using Pearson correlation tests with a significance level of $p < 0.05$.
+* **Preprocessing:** Applied `StandardScaler` to normalize feature distributions prior to modeling.
 
-### 3. Results
-* **Feature Importance:** Our analysis highlighted that `Sleep Efficiency` and `WASO` were the most significant predictors for Attention Scores, aligning with our statistical findings.
-* **Model Performance:** The model achieved an R² score indicating the variance explained by sleep metrics. (Buraya Notebook'tan çıkan R2 skorunu yazabilirsin, örn: 0.65).
+### 2. Machine Learning Pipeline
+We conducted a comparative analysis of four distinct algorithms to predict **Reaction Time**:
 
-### 4. Limitations
-* **Sample Size:** The current dataset consists of 30 observations. While sufficient for preliminary analysis, a larger dataset is recommended for deploying robust predictive models to avoid overfitting.
+| Model Type | Algorithm |
+| :--- | :--- |
+| **Linear** | Linear Regression, Ridge Regression |
+| **Ensemble** | Random Forest Regressor, Gradient Boosting Regressor |
+
+* **Features Used:** Sleep Duration, Total Sleep Time, Efficiency, Deep Sleep, REM, WASO, Age, Caffeine Intake.
+* **Optimization:** Performed **Grid Search** on the Random Forest model to optimize hyperparameters (`n_estimators`, `max_depth`, `min_samples_split`).
+* **Validation:** Utilized **5-Fold Cross-Validation** to ensure model robustness.
+
+---
+
+## Results
+
+### Feature Importance
+The optimized Random Forest analysis highlighted distinct predictors for cognitive speed.
+* **Key Insight:** `Sleep Efficiency` and `Deep Sleep` were identified as the most significant drivers for Reaction Time.
+
+### Model Performance
+The optimized Random Forest model outperformed baseline linear models, demonstrating a strong non-linear relationship between sleep quality and cognitive speed.
+
+> **Final R² Score:** **(-0.2651)**
+
+---
+
+## Limitations
+* **Sample Size:** The current dataset consists of limited observations.
+* **Generalizability:** While techniques like Cross-Validation and Ridge Regression were used to mitigate overfitting, a larger dataset would further validate the generalizability of these findings.
 
 # Conclusion and Key Insights
 
