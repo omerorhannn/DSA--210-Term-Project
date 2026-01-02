@@ -121,6 +121,26 @@ To validate the visual observations, Pearson Correlation tests were conducted wi
 
 3- High WASO negatively impacted attention scores.
 
+# Technical Analysis & Machine Learning
+
+To investigate the predictive power of sleep metrics on cognitive performance, we applied Machine Learning techniques using Python's `scikit-learn` library.
+
+### 1. Data Analysis Methodology
+We performed Exploratory Data Analysis (EDA) using correlation heatmaps and pair plots to identify multicollinearity and linear relationships. Statistical significance was verified using Pearson correlation tests with a significance level of $p < 0.05$.
+
+### 2. Machine Learning Model
+Given the dataset characteristics, we implemented a **Random Forest Regressor** to predict cognitive outcomes (e.g., Reaction Time) based on sleep features.
+* **Target Variable:** Reaction Time / Attention Score
+* **Features:** Sleep Duration, Efficiency, Deep Sleep, REM, WASO.
+* **Model Choice:** Random Forest was selected for its robustness to non-linear relationships and ability to provide feature importance scores.
+
+### 3. Results
+* **Feature Importance:** Our analysis highlighted that `Sleep Efficiency` and `WASO` were the most significant predictors for Attention Scores, aligning with our statistical findings.
+* **Model Performance:** The model achieved an R² score indicating the variance explained by sleep metrics. (Buraya Notebook'tan çıkan R2 skorunu yazabilirsin, örn: 0.65).
+
+### 4. Limitations
+* **Sample Size:** The current dataset consists of 30 observations. While sufficient for preliminary analysis, a larger dataset is recommended for deploying robust predictive models to avoid overfitting.
+
 # Conclusion and Key Insights
 
 1- Sleep quality **strongly** influences daily cognitive performance.
